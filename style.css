@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 35px;
+    box-sizing: border-box;
+}
+p{
+    margin: 0px;
+}
+
+button{
+    outline: none;
+    border: none;
+}
+
+input[type="range"]{
+    accent-color: #ce036a;
+}
+.music-player{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: max-content;
+    column-gap: 20px;
+}
+.left-section{
+    background-color: #f3f3f3;
+    border-radius: 21px;
+    flex-grow: 1;
+    padding: 40px 30px 40px 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+}
+.wsa-logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+/* song list */
+.item-container{
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    padding:6px ;
+}
+.item-img{
+    flex-grow: 0;
+    display: flex;
+}
+.track-data-container{
+    flex-grow: 1;
+}
+
+.track-title{
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 15.47px;
+    text-align: left;
+}
+.track-artist{
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13.26px;
+    text-align: left;
+}
+.track-duration{
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 15.47px;
+    text-align: left;
+
+}
+.track-year{
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 13.26px;
+    text-align: left;
+}
+.player-container{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 21px;
+    background-color: #f3f3f3;
+    box-sizing: border-box;
+}
+.thumbnail-container{
+    height: 589px;
+    width: 601px;
+    border-radius: 21px;
+    background: linear-gradient(0deg, #d9d9d9 0%, #d9d9d9 100%, #fff);
+}
+.track-details{
+    margin-top: 30px;
+    text-align: center;
+    row-gap: 5px;
+}
+#song-title, #song-artist{
+    color: #333333;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 111.5%;
+}
+#song-artist{
+    color:#4F4F4F;
+    font-weight: 400;
+}
+#thumbnail{
+    width: 100%;
+    height: 100%;
+}
+.controls{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.track-progress{
+    position: relative;
+    width: 397px;
+    margin-bottom:48px ;
+}
+#progress{
+    position: absolute;
+    top: 16px;
+}
+.time{
+    color:#828282;
+    font-family: "Poppins" ;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 111.5%;
+    font-style: normal;
+}
+
+#time-left{
+    position: absolute;
+    top: 0;
+    right: 0; 
+}
+input[type="range"]{
+    width: 100%;
+    margin: 8px 0;
+}
+.btn-group{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.control-button{
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    background-color:#ce036a ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#play-pause{
+    margin: 0 50px;
+}
+.volume-container{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+.volume-range{
+    width: 310px !important;
+}
+
+.current-song{
+    color: #ce036a;
+}
+
+/* level 2 starts here */
+
+.btn-group > button{
+    display: flex;
+    cursor: pointer;
+}
+.nxt-prev-btn{
+    padding-top: 16px;
+}
+.player-bottom-control{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.custom-dropdown-container{
+    position: relative;
+    display: inline-block;
+    width: 188px;
+}
+.custom-dropdown-selected{
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 50px;
+    background-color: #ECE4F9;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+   
+}
+.custom-dropdown-items{
+ background-color: #f9f9f9;
+ position: absolute;
+ border-radius: 4px;
+ z-index: 1;
+ bottom: 62px;
+ width: 100%;
+ display: none; 
+ 
+}
+.custom-dropdown-item{
+    cursor: pointer;
+    color: black;
+    background-color:#fff;
+    font-family: Poppins;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 15.47px;
+    text-align: left;
+}
+.custom-dropdown-item:hover{
+    background-color: #ddd;
+}
+.selected-speeds{
+    color: #ce036a;
+}
+.list-thumbnail{
+    width: 42px;
+    height: 42px;
+    border-radius: 4px;
+    padding: 0px 6px;
+}
+
+
+
+
+
+
+/* Add this style for the modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+  
+.model-content { 
+    position: relative;
+    background-color: #fefefe;
+    width: fit-content;
+    width: 656px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.modal-image-container {
+    position: relative;
+}
+  
+.verified-badge { 
+    position: absolute;
+    bottom: 72px;
+    left: 35px;
+    color: white;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+  
+#preview-artist {
+    position: absolute;
+    bottom: 11px;
+    left: 35px;
+    color: var(--Texto---Escuro, #f6f6f6);
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+}
+  
+#preview-img { /* Changed from #preview-image to #preview-img */
+    width: 100%;
+    object-fit: cover;
+    height: 222px;
+}
+  
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+  
+/* Additional styling for the preview details */
+#preview-details { /* Changed from #previewDetails to #preview-details */
+    display: flex;
+    justify-content: space-between;
+    column-gap: 24px;
+    padding: 24px;
+}
+  
+.verified-badge { /* Already corrected */
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+  
+#previewTitle { /* This ID is missing in your HTML. Make sure it exists or change it accordingly */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+#preview-description { /* This ID is used correctly */
+    font-size: 16px;
+}
+  
+#follow-count {
+    color: #121212;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+  
+#listener-count { /* Changed from #listner-count to #listener-count */
+    color: #121212;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 36px;
+    margin-bottom: 8px;
+}
+  
+#preview-description { /* Already used correctly */
+    color: #000001;
+    font-family: "Poppins";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+
+  

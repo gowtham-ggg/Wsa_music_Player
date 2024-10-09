@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container of the music player -->
+    <div class="music-player">
+        
+        <!-- Left section for the track list -->
+        <section class="left-section">
+            <!-- WSA logo container -->
+            <div class="wsa-logo-container">
+                <img src="logo/wsa-logo.svg" alt="WSA logo">
+            </div>
+
+            <!-- Song list container -->
+            <div class="song-list-container">
+                <h2>Track List</h2>
+                <div id="song-list">
+                    <!-- Song item list -->
+                    <div class="item-list-container">
+                        <!-- Icon -->
+                        <div class="item-img">
+                            <img src="/icons/outline.svg" alt="icon">
+                        </div>
+
+                        <!-- Track data: song title and artist -->
+                        <div class="item-track-data">
+                            <p></p>
+                            <p></p>
+                        </div>
+
+                        <!-- Song duration and year -->
+                        <div class="item-track-duration">
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Right section for player controls -->
+        <section class="player-container">
+            <!-- Thumbnail container -->
+            <div class="thumbnail-container" id="thumbnail-container">
+                <img src="" alt="thumbnail" id="thumbnail">
+            </div>
+
+            <!-- Track details -->
+            <div class="track-details">
+                <!-- Song title and description -->
+                <p id="player-title"></p>
+                <p id="player-description"></p>
+            </div>
+            
+            <!-- Controls -->
+            <div class="controls">
+                <!-- Track progress -->
+                <div class="track-progress">
+                    <input type="range" id="progress" min="0" max="100" value="0" step="1">
+                    <div class="time" id="current-time">00:00</div>
+                    <div class="time" id="time-left">00:00</div>
+                </div>
+
+                <!-- 3 button controls group -->
+                <div class="btn-group">
+                    <button class="shuffle" id="shuffle">
+                        <img src="icons/shuffle-highlighted.svg" id="shuffle-img">
+                    </button>
+                    <button class="nxt-prev-btn" id="prev">
+                        <img src="icons/prev.svg">
+                    </button>
+                    <button id="play-pause">
+                        <img src="icons/play-button.svg">
+                    </button>
+                    <button class="nxt-prev-btn" id="next">
+                        <img src="icons/next.svg">
+                    </button>
+                    <button class="repeat" id="repeat">
+                        <img src="icons/loop.svg" id="loop-img">
+                    </button>
+                </div>
+
+                <!-- Volume container -->
+                <div class="player-bottom-control">
+                    <div class="volume-container">
+                        <img src="icons/volume-low.svg">
+                        <input type="range" id="volume" min="0" max="1" step="0.1" value="1" class="volume-range">
+                        <!-- 0 is mute and 1 is volume max -->
+                        <img src="icons/volume-high.svg">
+                    </div>
+                    <!-- Play back speed container -->
+                     <div class="custom-dropdown-container" id="custom-dropdown">
+                        <div class="custom-dropdown-selected" id="selectedvalue">
+                            <img src="icons/headphone.svg" alt="headphone">
+                            playback speed
+                            <img src="icons/arrow.svg" alt="arrow btn" id="dropdown-arrow">
+                        </div>
+                        <div class="custom-dropdown-items" id="dropdown-list-items">
+                            <div class="custom-dropdown-item" data-value="2">2x</div>
+                            <div class="custom-dropdown-item" data-value="1.5">1.5x</div>
+                            <div class="custom-dropdown-item" data-value="1.25">1.25x</div>
+                            <div class="custom-dropdown-item selected-speed" data-value ="1">Normal</div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="preview-modal" class="modal">
+
+        <div class="model-content">
+            <div class="modal-image-container">
+                <span class="close" id="close-modal"><img src="icons/close.svg"></span>
+                <img id="preview-img" src="" alt="preview-img">
+                <p class="verified-badge" id="verified"><img src="icons/verified.svg">Verified Artist</p>
+                <p id="preview-artist"></p>
+            </div>
+            <div id="preview-details">
+                <div class="preview-stats">
+                    <h1 id="follow-count"></h1>
+                    <p>follower</p>
+                    <h1 id="listener-count"></h1>
+                    <p>Monthly Listener</p>
+                </div>
+                <p id="preview-description"></p>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
