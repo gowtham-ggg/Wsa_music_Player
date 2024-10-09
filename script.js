@@ -155,15 +155,15 @@ document.addEventListener("DOMContentLoaded", function(){
     function toggleShuffleMode(){
         isShufflemode = true;
         isRepeatMode =false;
-        shuffleImg.src="/icons/shuffle-highlighted.svg";
-        loopImg.src = "/icons/loop.svg";
+        shuffleImg.src="icons/shuffle-highlighted.svg";
+        loopImg.src = "icons/loop.svg";
         updateButtonState(shuffleBtn, isShufflemode);
     }
     function toggleRepeatMode(){
         isShufflemode =false;
         isRepeatMode = true;
-        shuffleImg.src ="/icons/shuffle.svg";
-        loopImg.src = "/icons/loop-highlighted.svg";
+        shuffleImg.src ="icons/shuffle.svg";
+        loopImg.src = "icons/loop-highlighted.svg";
         updateButtonState(repeatBtn, isRepeatMode);
     }
     function updateButtonState(button, isActive){
