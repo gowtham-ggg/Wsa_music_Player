@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(){
             isverified:true,       //added some properties
             followers : 13849403,
             monthlyListener: 201242,
-            description: "this song is sung by alishbeats "
+            description: "this song is sung by alishbeats Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia itaque ex, sequi iste vero dignissimos eligendi excepturi quas delectus mollitia eaque commodi harum laborum velit, et neque animi voluptatum error"
         },
         {
             title: "Science Documentary",
